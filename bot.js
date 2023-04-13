@@ -7,7 +7,8 @@ const {
     WELCOME_MESSAGE,
     INPUT_DOMAIN_NAME,
     INPUT_DOMAIN_AND_PORT,
-    COMMAND_ABORTED
+    COMMAND_ABORTED,
+    CANNOT_RESOLVE_MESSAGE
 } = require('./message/messages');
 const checkPort = require('./functionality/port/port');
 const checkDomainAvailability = require('./functionality/domainName/domainName');
@@ -140,6 +141,6 @@ bot.onText(/^([^\s]+)(\s+(\d+))?$/, async (msg, match) => {
                 break;
         }
     } else if (!listCommands.includes(msg.text)) {
-        await bot.sendMessage(msg.chat.id, "I can't resolve your message");
+        await bot.sendMessage(msg.chat.id, CANNOT_RESOLVE_MESSAGE);
     }
 })

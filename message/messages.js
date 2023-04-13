@@ -11,7 +11,8 @@ const MESSAGES = {
         '/tracert {domain} - show trace route of domain.',
     INPUT_DOMAIN_NAME: 'Input domain name',
     INPUT_DOMAIN_AND_PORT: 'Input domain name and port',
-    COMMAND_ABORTED: "Command was aborted",
+    COMMAND_ABORTED: 'Command was aborted',
+    CANNOT_RESOLVE_MESSAGE: 'I can\'t resolve your message',
 
     // Ports
     PORT_UNAVAILABLE_TIMEOUT: 'The port $port on the host $host is unavailable due to exceeding the timeout of 5 seconds.',
